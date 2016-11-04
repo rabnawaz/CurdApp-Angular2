@@ -1,0 +1,29 @@
+<nav class="navbar navbar-dark bg-inverse">
+  <a class="navbar-brand" href="#">CrudApp</a>
+  <ul class="nav navbar-nav">
+     <li class="nav-item" *ngIf="!isLoggedIn()">
+              <button [routerLink]="['/login']" type="button" class="btn btn-outline-success menu-btn">Login</button>
+          </li>
+
+      <li class="nav-item" (click)="logout()" *ngIf="isLoggedIn()">
+            <button type="button" class="btn btn-outline-success menu-btn">Logout</button>
+     </li>
+     <li class="nav-item dropdown" *ngIf="isLoggedIn() && isRole()">
+      <a class="nav-link dropdown-toggle" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">List1</a>
+      <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+        <a class="dropdown-item" [routerLink]="['/list']">Show List</a>
+        <a class="dropdown-item"[routerLink]="['/add']">Add Data</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown" *ngIf="isLoggedIn() && !isRole()">
+      <a class="nav-link dropdown-toggle" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">List2</a>
+      <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
+        <a class="dropdown-item" [routerLink]="['/listB']">Show List</a>
+        <a class="dropdown-item"[routerLink]="['/addB']">Add Data</a>
+      </div>
+    </li>
+
+  </ul>
+
+</nav>
+

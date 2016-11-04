@@ -1,0 +1,45 @@
+<h1 class="userB">User B</h1>
+<div class="form-main-bg">
+     <div class=" col-md-4 offset-md-4 form-bg">
+     <form (ngSubmit)="onSaveProfile(f)" #f="ngForm">
+       <h4 class="form-heading">Edit Your Profile</h4>
+       <!--name-->
+       <div class="form-group row">
+           <label for="example-text-input" class="col-xs-2 col-md-1 col-form-label"><i class="fa fa-user form-icon" aria-hidden="true"></i></label>
+             <div class="col-xs-10 col-md-11">
+              <input  class="form-control" type="text"   [(ngModel)]="useredit.title" [ngModelOptions]="{standalone: true}" placeholder="Title" id="example-text-input">
+            </div>
+      </div><!--row-->
+      <div class="form-group row">
+           <label for="example-text-input" class="col-xs-2 col-md-1 col-form-label"><i class="fa fa-user form-icon" aria-hidden="true"></i></label>
+             <div class="col-xs-10 col-md-11">
+              <textarea  class="form-control" type="text"   [(ngModel)]="useredit.description" [ngModelOptions]="{standalone: true}" placeholder="Description" id="example-text-input"></textarea>
+            </div>
+      </div><!--row-->
+       <div class="form-group row">
+           <label for="example-text-input" class="col-xs-2 col-md-1 col-form-label"><i class="fa fa-user form-icon" aria-hidden="true"></i></label>
+             <div class="col-xs-10 col-md-11">
+              <input  class="form-control" type="text"   [(ngModel)]="useredit.eventId" [ngModelOptions]="{standalone: true}" placeholder="Event ID" id="example-text-input">
+            </div>
+      </div><!--row-->
+        <div class="form-group row">
+           <label for="example-text-input" class="col-xs-2 col-md-1 col-form-label"><i class="fa fa-user form-icon" aria-hidden="true"></i></label>
+             <div class="col-xs-10 col-md-11">
+              <input  class="form-control" type="date"   [(ngModel)]="useredit.date" [ngModelOptions]="{standalone: true}" placeholder="Date" id="example-text-input">
+            </div>
+      </div><!--row-->
+      <div class="form-group row">
+           <label for="example-text-input" class="col-xs-2 col-md-1 col-form-label"><i class="fa fa-user form-icon" aria-hidden="true"></i></label>
+             <div class="col-xs-10 col-md-11">
+              <input  class="form-control" type="text"   [(ngModel)]="useredit.completed" [ngModelOptions]="{standalone: true}" placeholder="Completed" id="example-text-input">
+            </div>
+      </div><!--row-->
+
+    <!--register button-->
+     <div class="form-group row">
+          <button type="submit" class="btn btn-outline-success form-btn">Save Yor Profile</button>
+     </div>
+     </form>
+     </div><!--col-->
+
+ </div><!--banner-->

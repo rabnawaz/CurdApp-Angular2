@@ -1,0 +1,68 @@
+<!--banner-->
+<div class="container-fluid">
+<div class="form-main-bg">
+  <form (ngSubmit)="onLogin(f)" #f="ngForm" class="form-horizontal form-label-left parsleyjs" method="post"
+              data-parsley-priority-enabled="false"
+              novalidate="novalidate">
+     <div class="col-md-4 offset-md-4 form-bg">
+       <h4 class="form-heading">Login</h4>
+       <!--user name-->
+       <div class="form-group row">
+         <div class="input-group">
+            <span class="input-group-addon form-icon-bg"><i class="fa fa-user form-icon" aria-hidden="true"></i></span>
+           <input type="text" id= "email" name="email" class="form-control form-input" placeholder="Email" aria-describedby="basic-addon1" [(ngModel)]="user.email"  required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" #email="ngModel">
+        </div>
+      </div><!--row-->
+      <!--password-->
+      <div class="form-group row">
+        <div class="input-group">
+           <span class="input-group-addon form-icon-bg"><i class="fa fa-unlock-alt form-icon" aria-hidden="true"></i></span>
+          <input type="password" name="password" id="password" class="form-control form-input" placeholder="Password" aria-describedby="basic-addon1"[(ngModel)]="user.password" required #password="ngModel">
+        </div>
+     </div><!--row-->
+     <!--forget password-->
+     <div class="form-group row">
+       <a [routerLink]="['/forgetPassword']">
+          <p class="forget-pwd">Forget your password ?</p>
+       </a>
+     </div>
+     <!--login button-->
+     <div class="form-group row">
+          <button type="submit" class="btn btn-outline-success form-btn" [disabled]="!f.valid">Login</button>
+     </div>
+     </div><!--col-->
+     <!--sign up -->
+ </form>
+ </div>
+ 
+<!--background-->
+
+<!--table-->
+ <div class="container loginlist">
+   <div class="row form-table table-responsive">
+     <table class="table">
+  <thead class="thead-inverse">
+   <tr>
+     <th>Image</th>
+     <th>Title</th>
+     <th>Description</th>
+     <th>Date</th>
+   </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of userData">
+    <td><img src="http://manukulaseva.org/angular2/api/upload/{{data.imgName}}" height ="40"></td>
+    <td>{{data.title}}</td>
+    <td>{{data.description}}</td>
+    <td>{{data.date}}</td>
+  </tr> 
+  </tbody>
+  </table>
+   </div><!--row-->
+</div><!--container-->
+<div class="form-group row">
+       <a [routerLink]="['']">
+          <h1><p class="more-pwd">More</p></h1>
+       </a>
+     </div>
+</div><!--container-fluid-->

@@ -1,0 +1,19 @@
+.userA{
+    padding-left: 591px;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+ .table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #eceeef;
+    text-align: center;
+}
+ .table td, .table th {
+    padding: .75rem;
+    vertical-align: top;
+    border-top: 1px solid #eceeef;
+    text-align: center;
+}
+ .table{
+ 	border:1px solid #ccc ;
+ }
