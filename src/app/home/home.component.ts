@@ -8,7 +8,7 @@ import { ToastsManager } from 'ng2-toastr/ng2-toastr';
    selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
-  providers: [HomeService]
+  providers: [HomeService],
 })
 export class HomeComponent {
 	  userData: any[] = [];
@@ -24,3 +24,4 @@ export class HomeComponent {
  }
 
   }
+

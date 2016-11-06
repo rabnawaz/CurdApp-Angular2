@@ -15,7 +15,7 @@
     <tr *ngFor="let data of userData">
     <td><img src="http://manukulaseva.org/angular2/api/upload/{{data.imgName}}" height ="40"></td>
     <td>{{data.title}}</td>
-    <td>{{data.description}}</td>
+    <td>{{data.description | summary}} 	<button [class.more]>View More</button></td>
     <td>{{data.date}}</td>
   </tr> 
   </tbody>
