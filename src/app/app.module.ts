@@ -22,6 +22,7 @@ import { EditComponent } from './crudAppB/edit/edit.component';
 import { LoginService } from './login/login.service';
 import { AuthService } from './login/auth.service';
 import { HomeComponent } from './home/home.component';
+import {SummaryPipe} from './home/summary.pipe';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HomeComponent } from './home/home.component';
     ListComponent,
     AddComponent,
     EditComponent,
-    HomeComponent
+    HomeComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,
